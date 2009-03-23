@@ -1,8 +1,9 @@
+require 'rubygems'
+require 'rr'
 require 'test/unit'
 require 'contest'
-require 'rr'
-require 'lib/shouteverything/irc'
 require 'timeout'
+require 'lib/shouteverything'
 
 class MockSocket
   def self.pipe
