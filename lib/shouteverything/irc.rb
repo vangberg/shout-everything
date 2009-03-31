@@ -5,7 +5,7 @@ module ShoutEverything
     def self.shout(options, &block)
       raise ArgumentError unless block_given?
 
-      irc = new(options[:server], options[:port], options[:nick], options[:password]) do |irc|
+      new(options[:server], options[:port], options[:nick], options[:password]) do |irc|
         to = options[:to]
         if to =~ /^#/
           irc.join(to[1..-1], &block)
